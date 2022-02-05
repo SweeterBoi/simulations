@@ -137,9 +137,5 @@ class Bird {
     fill(FARBE); 
     //Malt das Dreieck mit den Koordinaten der Eckpunkte auf den Bildschirm
     triangle(x1, y1, x2, y2, x3, y3);
-  }
-  
-  
-  
-  
+  } 
 }
