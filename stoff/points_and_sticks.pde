@@ -50,29 +50,25 @@ public class Point {
   }
 }
 
+/**
+*
+*
+ */
+public class Stick {
 
+  public Point startPoint, endPoint;
+  public final float length;
+  public final color strokeColor = color(255, 80, 80);
 
-
-
-
-
-
-
-  public class Stick {
-
-    public Point startPoint, endPoint;
-    public final float length;
-    public final color strokeColor = color(255, 80, 80);
-
-    public Stick(Point a, Point b) {
-      startPoint = a;
-      endPoint = b;
-      length = calc.dist(a._pos, b._pos);
-    }
-
-    public void blit() {
-      stroke(strokeColor);
-      strokeWeight(1);
-      line(startPoint.x(), startPoint.y(), endPoint.x(), endPoint.y());
-    }
+  public Stick(Point a, Point b) {
+    startPoint = a;
+    endPoint = b;
+    length = calc.dist(a._pos, b._pos);
   }
+
+  public void blit() {
+    stroke(strokeColor);
+    strokeWeight(1);
+    line(startPoint.x(), startPoint.y(), endPoint.x(), endPoint.y());
+  }
+}

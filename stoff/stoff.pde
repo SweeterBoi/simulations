@@ -12,11 +12,11 @@ Point draggedPoint = null;
 
 
 //Stärke der Gravitation pro Timestep
-float gravity = 1;
+float gravity = .8;
 //Stärke der Reibung
 float reibungsKoeffizient = 0.95;
 //Anzahl der Iterationen bei der Berechnung der Physik
-int numIterations = 10;
+int numIterations = 5;
 
 //Legt fest ob die Zeit eingefroren wird oder nicht
 boolean playAnimation = false;
