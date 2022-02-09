@@ -7,9 +7,9 @@
     - [1.1 Die Entwicklungsumgebung](#11-die-entwicklungsumgebung)
     - [1.2 Code](#12-code)
     - [1.3 Kommentare](#13-kommentare)
-  - [2. Variabeln](#2-variabeln)
-    - [2.1 Was sind Variabeln](#21-was-sind-variabeln)
-    - [2.2 Variabeln Typen](#22-variabeln-typen)
+  - [2. Variablen](#2-variablen)
+    - [2.1 Was sind Variablen](#21-was-sind-variablen)
+    - [2.2 Variablen Typen](#22-variablen-typen)
   - [3. if & else Bedingungen](#3-if--else-bedingungen)
   - [4. Funktionen](#4-funktionen)
     - [4.1 Wie Funktionen funktionieren](#41-wie-funktionen-funktionieren)
@@ -59,21 +59,21 @@ Code wird in diesen Boxen dargestellt:
 
 OK. Let's begin!
 
-## 2. Variabeln
+## 2. Variablen
 
-### 2.1 Was sind Variabeln
+### 2.1 Was sind Variablen
 
 Die Aufgabe eines Programms ist das Verwalten- oder Manipulieren von Daten.
-Um diese Daten im Blick zu behalten und bei bedarf ändern zu können benutzen wir sog. Variabeln.
+Um diese Daten im Blick zu behalten und bei bedarf ändern zu können benutzen wir sog. Variablen.
 Bspw. Werden position und Geschwindigkeit des Balls in [start-here.pde](start_here.pde) auf diese Weise gespeichert und fortlaufend verändert.
 
 > Eine Variable ist ein Datenspeicher den wir zur Laufzeit des Programms manipulieren können
 
-### 2.2 Variabeln Typen
+### 2.2 Variablen Typen
 
-Computer speichern daten in Form von Bits (0 oder 1). So kann die Zahl 27 bspw. in der Form 00011011 dargestellt werden.
+Computer speichern Daten in Form von Bits (0 oder 1). So kann die Zahl 27 bspw. in der Form 00011011 dargestellt werden.
 Alle Daten, die der Computer verwaltet werden auf diese Weise gespeichert, doch nicht alle Arten von Daten sind gleich.
-Die Information von Text unterscheidet sich deutlich von der einer Zahl und selbst da gibt es weitere unterschiede.
+Die Information von Text unterscheidet sich deutlich von der einer Zahl und selbst da gibt es weitere Unterschiede.
 
 Die Folgenden Datentypen nennt man auch primitive Typen.
 
@@ -88,7 +88,7 @@ Die Folgenden Datentypen nennt man auch primitive Typen.
 | Character                       | char      | Einzelne Zeichen ('a', 'F', etc)                     |
 
 
-In Java werden variabeln wie folgt zugewiesen:
+In Java werden Variablen wie folgt zugewiesen:
 
 Typ Name = Wert;
 
@@ -103,8 +103,8 @@ Bsp:
 - char buchstabe = 'A';
 ```
 
-> VariablenNamen dürfen Buchstaben, Zahlen und sowohl - alsauch _ beinhalten, dürfen aber nur mit Buchstaben oder _ beginnen!
-> Eine häufige Konvention ist es mit einem kleinen Buchstaben Anzufangen und neue Wörter mit einem Großbuchstaben zu beginnen (sehrGutBeschreibenderVariabelnNameDerRechtLeichtZuLesenIst)
+> VariablenNamen dürfen Buchstaben, Zahlen und sowohl - als auch _ beinhalten, dürfen aber nur mit Buchstaben oder _ beginnen!
+> Eine häufige Konvention ist es mit einem kleinen Buchstaben Anzufangen und neue Wörter mit einem Großbuchstaben zu beginnen (sehrGutBeschreibenderVariablenNameDerRechtLeichtZuLesenIst)
 
 ```Java
 final int KONSTANTE2 = 255;
@@ -135,7 +135,7 @@ else {
 // Hier geht es weiter sobald einer der Codeblöcke [A], [B] oder [C] ausgeführt wurden!
 ```
 
-> In dieser if-else Kette wird jedes der Statements in den runden Klammern evaluiert und solte der Ausdruck wahr sein, wird der folgende Codeblock ausgeführt. Die anderen Ausdrücke werden nicht mehr betrachtet
+> In dieser if-else Kette wird jedes der Statements in den runden Klammern evaluiert und sollte der Ausdruck wahr sein, wird der folgende Codeblock ausgeführt. Die anderen Ausdrücke werden nicht mehr betrachtet
 > Da x den Wert 5 hat wird in der Codeblock [A] nicht ausgeführt
 > Analog wird auch der Codeblock [B] nicht ausgeführt
 > Weil alle oberen 
@@ -187,7 +187,7 @@ Alias(parameter_1, parameter_2, parameter_3);
 
 ### 4.2 Warum Funktionen?
 
-Oft wird Code öfter gebraucht. Beispielsweise müssen objekte öfter auf den Bildschirm gezeichnet werden oder Werte immer wieder berechnet werden.
+Oft wird Code öfter gebraucht. Beispielsweise müssen Objekte öfter auf den Bildschirm gezeichnet werden oder Werte immer wieder berechnet werden.
 Da es wesentlich aufwendiger ist, Code zu ändern der an vielen Stellen vorkommt und dabei keine Stelle zu vergessen ist es üblich Code-Duplikate zu vermeiden. Nur eine einzige Stelle im Code modifizieren zu müssen macht den Code nicht nur einfacher zu verbessern sondern auch wesentlich lesbarer.
 Ein beschreibender Funktions-Name (Alias) ist wesentlich einfacher zu verstehen als eine Reihe Kommentare an jeder Implementation
 
@@ -242,7 +242,7 @@ void saySomethingNice() {
     print("You are awesome <3");
 }
 ```
-> Vor jede Funktion schreiben wir einen mehrzeilligen Kommentar, wie im Beispiel gezeigt. Dieser beinhaltet
+> Vor jede Funktion schreiben wir einen mehrzielligen Kommentar, wie im Beispiel gezeigt. Dieser beinhaltet
 > eine kurze Beschreibung der Funktion sowie die keywords @param und @return.
 >
 > @param wird für jeden Parameter der Funktion aufgeführt und gibt an was für ein Parameter erwartet wird und was dieser repräsentiert.
