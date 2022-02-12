@@ -14,13 +14,13 @@
     - [1.4 Methoden](#14-methoden)
     - [1.5 Interfaces](#15-interfaces)
     - [1.5 Konventionen](#15-konventionen)
-  - [2. for & while](#2-for--while)
-    - [2.1 for](#21-for)
-    - [2.2 while](#22-while)
-    - [2.3 Beispiele](#23-beispiele)
-  - [3. Weitere Datenstrukturen](#3-weitere-datenstrukturen)
-    - [3.1 Arrays & Listen](#31-arrays--listen)
-    - [3.2 PVectoren](#32-pvectoren)
+  - [2. Weitere Datenstrukturen](#2-weitere-datenstrukturen)
+    - [2.1 Arrays & Listen](#21-arrays--listen)
+    - [2.2 PVectoren](#22-pvectoren)
+  - [3. for & while](#3-for--while)
+    - [3.1 for](#31-for)
+    - [3.2 while](#32-while)
+    - [3.3 Beispiele](#33-beispiele)
   - [4. Explizite Euler Methode](#4-explizite-euler-methode)
 
 ## 1. Klassen & Interfaces
@@ -168,7 +168,7 @@ class Schachbrett(){
 > Jede Figur kann mit zwei Parametern initialisiert werden. Daher müssen die Subklassen den Konstruktor nicht selbst implementieren
 > Die Methode bewegeZu() ist allerdings für jede Figur unterschiedlich da sich keine zwei Figuren gleich bewegen können.
 > Des Weiteren implementiert die Figur Koenig eine neue Methode, die keine Andere Figur hat, denn nur der König kann im Schach stehen.
-> In der Klasse Schachbrett finden wir jetzt den Vorteil der abstrakten Klasse Figur. Da alle Figuren die Klasse Figur erweitern, können all diese Figuren in **einer** Liste gespeichert werden. (Zu infos bgl. der ArrayList Klasse siehe [3.1 Arrays & Listen](#31-arrays--listen).
+> In der Klasse Schachbrett finden wir jetzt den Vorteil der abstrakten Klasse Figur. Da alle Figuren die Klasse Figur erweitern, können all diese Figuren in **einer** Liste gespeichert werden. (Zu infos bgl. der ArrayList Klasse siehe [3.1 Arrays & Listen](#21-arrays--listen).
 > Der Compiler weiß also beispielsweise, dass alle Figuren die Methode bewegeZu()und die Felder _pos ud istWeiss
 
 ### 1.3 Konstruktoren
@@ -202,21 +202,53 @@ public class Test {
 
 ### 1.5 Konventionen
 
+## 2. Weitere Datenstrukturen
 
-## 2. for & while
+### 2.1 Arrays & Listen
 
-### 2.1 for
-
-### 2.2 while
-
-### 2.3 Beispiele
+### 2.2 PVectoren
 
 
-## 3. Weitere Datenstrukturen
+## 3. for & while
 
-### 3.1 Arrays & Listen
+Ein weiteres Hilfsmittel ist das Iterieren über Datenmengen. Da wir in diesem Beispiel nicht nur einen Ball simulieren sondern 10 oder 42 oder 129 brauchen wir eine Möglichkeit alle Bälle effizient ansprechen zu können ohne 10 oder 42 oder 129 Variablen der Klasse Ball zu haben. Hierzu benutzen wir for- bzw. while Schleifen.
 
-### 3.2 PVectoren
+### 3.1 for
+for-Schleifen werden folgendermaßen benutzt:
 
+```Java
+int num = 5
+for(int i = 0; i < num; i++) {
+  print(i);
+}
+>> 0
+>> 1
+>> 2
+>> 3
+>> 4
+```
+> Der erste Parameter legt den Startwert der Variablen i fest, in diesem Fall 0.
+> Der zweite Parameter legt die Bedingung fest für die die Schleife ausgeführt wird. Solange i < num (< 5) ist wird die Schleife ausgeführt.
+> Der dritte Parameter legt die Änderung von i am **ende** der Schleife fest.
+> Wie im Beispiel zu sehen ist wird die Schleife fünf mal ausgeführt wobei i beim ersten Mal den Wert 0 und beim letzten mal den Wert 4 hat. Anschließend ist die Bedingung i < 5 nicht mehr erfüllt und die Schleife endet.
+### 3.2 while
+while-schleifen sind dagegen wesentlich kompakter als for-Schleifen:
+
+```Java
+int num = 5;
+int i = 0;
+while(i < num) {
+  print(i);
+  i++;
+}
+>> 0
+>> 1
+>> 2
+>> 3
+>> 4
+```
+> Die while-Schleife kontrolliert nur ob das Statement wahr oder falsch ist und übernimmt die Deklaration und das Inkrementieren nicht.
+> Es ist leicht möglich die while-Schleife in einen unendlichen loop zu bringen, einfach indem man das Inkrementieren der Iterationsvariable vergisst.
+### 3.3 Beispiele
 
 ## 4. Explizite Euler Methode
