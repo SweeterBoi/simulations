@@ -1,13 +1,30 @@
+/**
+* Repräsentiert einen Punkt.
+*
+* @version 23.02.2022
+*
+* @author Max Janik
+*/
 class Point {
     PVector _pos;
-    boolean isInCircle;
+    boolean _istImKreis;
     int size = 5;
     
-    public Point(float x, float y, boolean isincircle) {
+    /**
+    * Istanziert einen Punkt.
+    *
+    * @param x x-Komponente des Punktes
+    * @param y y-Komponente des Punktes
+    * @param istImKreis Gibt an ob der Punkt innerhalb des Kreises gelandet ist
+    */
+    public Point(float x, float y, boolean istImKreis) {
         _pos = new PVector(x, y);
-        isInCircle = isincircle;
+        _istImKreis = istImKreis;
     }
     
+    /**
+    * Zeichnet den Punkt auf den Bildschirm.
+    */
     public void blit() {
         point(_pos.x, _pos.y);
     }  
