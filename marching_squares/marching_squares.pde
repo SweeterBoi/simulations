@@ -54,16 +54,16 @@ void keyPressed() {
 
 void draw() {
   if(loadingBar.isDone()) {
-  //measureTime();
+  measureTime();
   counter = counter%100;
   counter++;
   background(0);
   if (!onPause) {
-    for (int i = 0; i < Metaballs.size(); i++) {
-      Metaballs.get(i).update();
+    for (Metaball m : Metaballs) {
+      m.update();
     }
   }
-  Grid grid = (!onPause) ? grids.get(currentRes-1) : grids.get(0);
+  Grid grid = (!onPause) ? grids.get(currentRes-1) : grids.get(currentRes-1);
   grid.update(Metaballs);
   grid.blit();
   } else {
@@ -89,10 +89,10 @@ void measureTime() {
 void generateGrids(){
   int numPoints = 0;
   for (int i = 1; i < numRes+1; i++){
-    numPoints += (width/i -4) * (height/i -4);
+    numPoints += (width/i) * (height/i);
   }
   loadingBar.setMax(numPoints);
   for (int i = 1; i < numRes+1; i++) {
-    grids.add(new Grid(i, width/i-4, height/i-4, loadingBar));
+    grids.add(new Grid(i, width/i, height/i, loadingBar));
   }
 }

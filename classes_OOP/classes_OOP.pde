@@ -1,7 +1,7 @@
 // Liste der Bälle auf dem Bildschirm
 ArrayList<ball> Baelle = new ArrayList<ball>();
 // Anzahl der Bälle
-int num = 10000;
+int num = 100;
 
 void setup() {
     size(800, 600);
