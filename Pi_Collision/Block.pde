@@ -1,7 +1,11 @@
 /**
-*Exemplar der Klasse ist ein Block der sich in x-Richtung bewegt.
-*Exemplare besitzen eine X-Position, eine X-Geschwindigkeit
-*Eine Groesse und eine numerische Masse für Stossberechnung
+* Exemplar der Klasse ist ein Block der sich in x-Richtung bewegt.
+* Exemplare besitzen eine X-Position, eine X-Geschwindigkeit
+* Eine Groesse und eine numerische Masse für Stossberechnung
+*
+* @author Max Janik
+*
+* @version 25.12.2019
 */
 class block {
     
@@ -58,13 +62,12 @@ class block {
     *Updated denBlock und verschiebt ihn entsprechend der Geschwindigkeit
     */
     public void update() {
-        if (_xPosition <= lvl.WALL) {
+        if (_xPosition <= lvl.WALL && _velocity > 0) {
             _velocity = -_velocity;
-            _xPosition = lvl.WALL +.0001;
+            _xPosition = lvl.WALL;
             zaehler.increment();
-        } else {
-            rungeKutta4();
         }
+        rungeKutta4();
     }
     
     private void rungeKutta4() {
