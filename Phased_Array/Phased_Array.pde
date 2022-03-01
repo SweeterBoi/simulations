@@ -1,3 +1,10 @@
+/**
+* Diese Simulation zeigt die Funktionsweise von Phased Arrays.
+*
+* @version 01.03.2022
+*
+* @author Max Janik
+*/
 Medium medium;
 
 void setup() {

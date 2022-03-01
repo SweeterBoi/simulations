@@ -1,21 +1,25 @@
+/**
+* Diese Hilfsklasse wird benutzt um die Wellengleichung der Teilchen aufzustellen und dient als Zugangspunkt für Klassenübergreifende berechnungen.
+* @version 01.03.2022
+*
+* @author Max Janik
+*/
 public static class Calc {
-    //private final color MINFARBE = color(50,80,40);
-    //private final color MAXFARBE = color(180, 240, 220);
+    //Ausbreitungsgeschwindigkeit der Welle im MEdium
     private static final float AUSBREITUNGSGESCHWINDIGKEIT = 100;
+    //Amplitude der Welle
     private static final float AMPLITUDE = 1;
     
     /**
+    * Methode iteriert über alle Oszillatoren und berechent aus der Superposition der Wellen der einzelnen Oszillatoren
+    * die Amplitude an einer gegebenen Position
     *
+    * @param position die Position für die die Wellenamplitude berechnet werden soll
+    * @param oszillatoren Liste der Oszillatoren, die zur Welle beitragen
+    * @param mill Zeit in Millisekunden
+    *
+    * @return die Amplitude als float
     */
-    /*
-    public static color farbMap(float wert, int oszillatorZahl) {
-    float bildmenge = 2 * oszillatorZahl * AMPLITUDE;
-    float rot = (255 - 50) / bildmenge * wert;      // Minimalwert = 50, Maximalwert = 255
-    float gruen = (220 - 80) / bildmenge * wert;    // Minimalwert = 80, Maximalwert = 220
-    float blau = (200 - 70) / bildmenge * wert;     // Minimalwert = 70, Maximalwert = 200
-    return new color(rot, gruen, blau);
-}*/
-    
     public static float berechneWert(PVector position, ArrayList<Oszillator> oszillatoren, int mill) {
         float value = 0;
         float Zeit = (float) mill / 1000;
@@ -31,6 +35,14 @@ public static class Calc {
         return value;
     }
     
+    /**
+    * Methode berechnet den Abstand zweier Punkte aus ihren Ortsvektoren
+    * 
+    * @param a erster Vektor
+    * @param b zweiter Vektor
+    *
+    * @return Abstand als float
+    */
     public static float dist(PVector a, PVector b) {
         return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
     }
