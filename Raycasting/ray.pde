@@ -1,18 +1,42 @@
+/**
+* Klasse stellt einen Lichtstrahl dar
+*
+* @version 22.03.2022
+* @author Max Janik
+*/
 public class Ray {
+    // Position des Strahls
     private PVector _pos;
+    // Richtung des Strahls
     private PVector _dir;
     
+    /**
+    * Instanziert den Strahl mit Position und Richtung
+    *
+    * @param pos Position des Strahls als PVector
+    * @param dir Richtung des Strahls als PVector
+    */
     public Ray(PVector pos, PVector dir) {
         _pos = pos;
         _dir = dir;
         _dir.normalize();
     }
     
+    /**
+    * Zeichnet den Strahl auf den Bildschirm
+    */
     public void draw() {
         float fac = 100;
         line(_pos.x, _pos.y, _pos.x + fac * _dir.x, _pos.y + fac * _dir.y);
     }
     
+    /**
+    * Methode findet Schnittpunkt mit einem Hindernis und gibt diesen Falls vorhanden zurück, andernfalls wird Null zurückgegeben
+    *
+    * @param b Boundary auf der der Schnittpunkt gesucht werden soll
+    *
+    * @return PVector mit Schnittpunkt, Null falls dieser nicht existiert
+    */
     public PVector cast(Boundary b) {
         float x1 = b.start().x;
         float y1 = b.start().y;
